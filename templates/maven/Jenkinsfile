@@ -6,7 +6,8 @@ pipeline {
   }
   stages {
     stage('Agent') {
-      agent { label 'maven' }
+      agent any
+      #agent { label 'maven' }
       stages {
         stage("Set GitHub Branch Protection") {
           when { 
